@@ -298,6 +298,8 @@ int main(int argc, const char * argv[])  {
 	// This will initialize the global variable 
 	// 'NSApp' with the application instance. 
 	[NSApplication sharedApplication]; 
+	// Activate the application (i.e. to give it focus).
+  	[NSApp activateIgnoringOtherApps:YES];
  
 	// Create a window: 
  
