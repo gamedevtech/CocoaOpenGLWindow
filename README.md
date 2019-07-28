@@ -1207,6 +1207,9 @@ static CVReturn GlobalDisplayLinkCallback(CVDisplayLinkRef, const CVTimeStamp*, 
 		
 	[[self window] setLevel: NSNormalWindowLevel];
 	[[self window] makeKeyAndOrderFront: self];
+
+	// Activate the application (i.e. give it focus).
+	[NSApp activateIgnoringOtherApps:YES];
 	
 	// Make all the OpenGL calls to setup rendering and build the necessary rendering objects
 	[[self openGLContext] makeCurrentContext];
